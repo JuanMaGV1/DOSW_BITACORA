@@ -8,7 +8,7 @@
 
 ---
 
-## Ejercicio 01 -
+## Ejercicio 01 - Números Pares mayores a diez 
 
 Dada una lista de números enteros, necesitamos obtener una nueva lista solo con los números pares mayores a 10.
 
@@ -27,13 +27,34 @@ public class Ejercicio1 {
 ![alt text](Semana1-Ejercicio1.png)
 **Explicación:** Creamos una clase para la manejar la entrada. Y con stream recorremos la lista de los números ingresados y usamos el metodo `filter()` para poder realizar el filtro de los números pares mayores a 10, con la condición `n%2==0` para obtener los números pares y la condición `n > 10` para que sean mayores a 10
 
-## Ejercicio 02 -
+## Ejercicio 02 - Cantidad de Palabras con más de 4 caracteres
 
-Enunciado del Ejercicio
+Dada una lista de palabras, se requiere: 
 
-**Código implementado:** (codigo)
-**Captura de ejecucion:** (imagen)
-**Explicación:** (breve descripcion de la solucion)
+- Filtrar las palabras que tengan más de 4 caracteres 
+- Convertirlas en Mayúsculas 
+- Ordenarlas alfabéticamente
+- Obtener la cantidad total de palabras resultantes 
+
+**Código implementado:**
+```
+public class Ejercicio2 {
+    public static void main(String[] args) {
+        Entrada2 entrada = new Entrada2();
+        List<String> palabras = entrada.leerLista();
+        long palabrasResultantes = palabras.stream()
+                                           .filter(n -> n.length() > 4)
+                                           .map(String::toUpperCase)
+                                           .sorted()
+                                           .count();
+        System.out.println("Cantidad de palabras resultantes: "+palabrasResultantes);
+    }
+}
+```
+**Captura de ejecucion:**
+![alt text](Semana1-Ejercicio2.png)
+
+**Explicación:** Creamos una clase para manejar la entrada, y con stream recorremos la lista de las palabras ingresadas. Usando el metodo `filter()` para poder filtrar las palabras con más de 4 caracteres, con la condición `n.legth() > 4`. Usando el metodo `map()` convertimos las palabras en máyusculas usando `String::toUpperCase` que es un metodo de la clase String. Usamos el metodo `sorted()` para ordenarlas alfabeticamente, no es necesario agregarle un parametro ya que por defecto ordena por orden alfabetico. Por ultimo el metodo `count()`, para la cantidad total de palabras resultantes.
 
 ## Ejercicio 03 -
 
