@@ -92,12 +92,35 @@ public class Ejercicio3 {
 
 **Explicación:** Usando stream, hacemos el filtrado de usuarios activos con el metodo `filter` y aprovechando la función `isActive` que creamos en usuario. Despues usamos el primer `map()` para transformar los datos de la clase `User` a `String` obteniendo el nombre de los usuarios ya filtrados. Igualmente, usamos el segundo `map()` para transformar los nombres en mayuscula. Despues usamos el metodo `sorted()` para organizar de manera alfabetica (no es necesario escribir un comparador como argumento, ya que por defecto usa el orden alfabetico). Por ultimo, usamos el metood `toList()` para dejar todo en una lista.
 
-## Ejercicio 04 -
+## Ejercicio 04 - Personas mayores de edad
 
-Enunciado del Ejercicio
+Dado un listado de Usuarios y utilizando los mismo atributos anteriores, filtrar las personas mayores de edad y obtener sus nombres. 
 
-**Código implementado:** (codigo)
-**Captura de ejecucion:** (imagen)
+**Código implementado:**
+```
+public class Ejercicio4 {
+    public static void main(String[] args) {
+        List<User> users = Arrays.asList(
+                new User("1", "Carlos", 20, true),
+                new User("2", "Ana", 13, false),
+                new User("3", "Miguel", 19, true),
+                new User("4", "Sofia", 25, true),
+                new User("5", "Daniel", 11, false),
+                new User("6", "Laura", 16, true)
+        );
+        List<String> adultsUsers = users.stream()
+                                        .filter(u -> u.getAge() > 18)
+                                        .map(User::getName)
+                                        .toList();
+        System.out.println("Usuarios mayores de edad: ");
+        System.out.println(adultsUsers);
+    }
+}
+```
+**Captura de ejecucion:**
+
+![alt text](Semana1-Ejercicio4.png)
+
 **Explicación:** (breve descripcion de la solucion)
 
 ## Ejercicio 05 -
@@ -106,7 +129,7 @@ Enunciado del Ejercicio
 
 **Código implementado:** (codigo)
 **Captura de ejecucion:** (imagen)
-**Explicación:** (breve descripcion de la solucion)
+**Explicación:** Usando stream, hacemos el filtrado de usuarios mayores de edad con el metodo `filter` con la condición `u -> u.getAge() > 18`. Despues usamos `map()` para transformar los datos de la clase `User` a `String` obteniendo el nombre de los usuarios ya filtrados. Por ultimo, usamos el metood `toList()` para dejar todo en una lista.
 
 
 # SEMANA No 2 - Bitácora Pokémon
