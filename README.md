@@ -121,15 +121,42 @@ public class Ejercicio4 {
 
 ![alt text](Semana1-Ejercicio4.png)
 
-**Explicación:** (breve descripcion de la solucion)
-
-## Ejercicio 05 -
-
-Enunciado del Ejercicio
-
-**Código implementado:** (codigo)
-**Captura de ejecucion:** (imagen)
 **Explicación:** Usando stream, hacemos el filtrado de usuarios mayores de edad con el metodo `filter` con la condición `u -> u.getAge() > 18`. Despues usamos `map()` para transformar los datos de la clase `User` a `String` obteniendo el nombre de los usuarios ya filtrados. Por ultimo, usamos el metood `toList()` para dejar todo en una lista.
+
+## Ejercicio 05 - Transacciones Bancarias
+
+Dada una lista de transacciones bancarias representadas por objetos: 
+
+`class Transaction { String id; double amount; boolean approved; }`
+Se requiere procesar la lista usando Streams para: 
+
+- Usar peek para ver cada transacción procesada (Utilizar System.out.println para ver la transacción) 
+- Verificar si existe al menos una transacción no aprobada 
+- Retornar true o false indicando si el lote de transacciones es válido. 
+
+**Código implementado:**
+```
+public class Reto5 {
+    public static void main(String[] args) {
+        List<Transaction> transactions = Arrays.asList(
+                new Transaction("T001", 500000, true),
+                new Transaction("T002", 250000, true),
+                new Transaction("T003", 800000, false),
+                new Transaction("T004", 150000, true)
+        );
+        boolean loteValido = transactions.stream()
+                                         .peek(transaction -> System.out.println("Procesando: " + transaction))
+                                         .anyMatch(transaction ->!transaction.isApproved());
+                                         
+        System.out.println("\n¿El lote es válido? " + !loteValido);
+    }
+}
+```
+**Captura de ejecucion:**
+
+![alt text](Semana1-Ejercicio5.png)
+
+**Explicación:** Usando stream, hacemos la revision de cada transacción con el metodo `peek()` y haciendo un override a la clase `Transaction` para poder ver la información de mejor manera. Despues usamos el metodo `anymatch()` para verificar si existe al menos una transacción no aprobada. Y en el mensaje final invertimos el resultado del anymatch porque se tuvo en cuenta que el lote de transacciones es valido si todas las transacciones fueron aprobadas.
 
 
 # SEMANA No 2 - Bitácora Pokémon
