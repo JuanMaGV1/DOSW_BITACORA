@@ -52,17 +52,45 @@ public class Ejercicio2 {
 }
 ```
 **Captura de ejecucion:**
+
 ![alt text](Semana1-Ejercicio2.png)
 
 **Explicación:** Creamos una clase para manejar la entrada, y con stream recorremos la lista de las palabras ingresadas. Usando el metodo `filter()` para poder filtrar las palabras con más de 4 caracteres, con la condición `n.legth() > 4`. Usando el metodo `map()` convertimos las palabras en máyusculas usando `String::toUpperCase` que es un metodo de la clase String. Usamos el metodo `sorted()` para ordenarlas alfabeticamente, no es necesario agregarle un parametro ya que por defecto ordena por orden alfabetico. Por ultimo el metodo `count()`, para la cantidad total de palabras resultantes.
 
-## Ejercicio 03 -
+## Ejercicio 03 - Obtener nombres de los Usuarios 
 
-Enunciado del Ejercicio
+Dada una lista de usuarios con los atributos: id, name, age, active 
 
-**Código implementado:** (codigo)
-**Captura de ejecucion:** (imagen)
-**Explicación:** (breve descripcion de la solucion)
+Filtra únicamente los usuarios activos, obtén una lista con los nombres en mayúscula y ordenada alfabéticamente.
+
+**Código implementado:**
+```
+public class Ejercicio3 {
+    public static void main(String[] args) {
+        List<User> users = Arrays.asList(
+                new User("1", "Carlos", 20, true),
+                new User("2", "Ana", 22, false),
+                new User("3", "Miguel", 19, true),
+                new User("4", "Sofia", 25, true),
+                new User("5", "Daniel", 21, false),
+                new User("6", "Laura", 23, true)
+        );
+        List<String> sortedUsers = users.stream()
+                                        .filter(User::isActive)
+                                        .map(User::getName)
+                                        .map(String::toUpperCase)
+                                        .sorted()
+                                        .toList();
+        System.out.println("Usuarios activos, ordenados alfabeticamente: ");
+        System.out.println(sortedUsers);
+    }
+}
+```
+**Captura de ejecucion:**
+
+![alt text](Semana1-Ejercicio3.png)
+
+**Explicación:** Usando stream, hacemos el filtrado de usuarios activos con el metodo `filter` y aprovechando la función `isActive` que creamos en usuario. Despues usamos el primer `map()` para transformar los datos de la clase `User` a `String` obteniendo el nombre de los usuarios ya filtrados. Igualmente, usamos el segundo `map()` para transformar los nombres en mayuscula. Despues usamos el metodo `sorted()` para organizar de manera alfabetica (no es necesario escribir un comparador como argumento, ya que por defecto usa el orden alfabetico). Por ultimo, usamos el metood `toList()` para dejar todo en una lista.
 
 ## Ejercicio 04 -
 
