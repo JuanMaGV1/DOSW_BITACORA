@@ -10,11 +10,22 @@
 
 ## Ejercicio 01 -
 
-Enunciado del Ejercicio
+Dada una lista de números enteros, necesitamos obtener una nueva lista solo con los números pares mayores a 10.
 
-**Código implementado:** (codigo)
-**Captura de ejecucion:** (imagen)
-**Explicación:** (breve descripcion de la solucion)
+**Código implementado:** 
+```
+public class Ejercicio1 {
+    public static void main(String[] args) {
+        Entrada1 entrada = new Entrada1();
+        List<Integer> numeros = entrada.leerLista();
+        List<Integer> resultado = numeros.stream().filter(n -> n%2==0 && n>10).toList();
+        System.out.println(resultado);
+    }
+}
+```
+**Captura de ejecucion:** 
+![alt text](Semana1-Ejercicio1.png)
+**Explicación:** Creamos una clase para la manejar la entrada. Y con stream recorremos la lista de los números ingresados y usamos el metodo `filter()` para poder realizar el filtro de los números pares mayores a 10, con la condición `n%2==0` para obtener los números pares y la condición `n > 10` para que sean mayores a 10
 
 ## Ejercicio 02 -
 
