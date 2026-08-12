@@ -241,13 +241,28 @@ public class Ejercicio3 {
 
 **Explicación:** Usando el metodo `reduce()` para sumar los elementos de la lista de niveles, y utilizando azucar sintactico podemos reducir la expresión a `Integer::sum`.
 
-### Ejercicio 04 - Nombre del Ejercicio
+### Ejercicio 04 - Pokémon Alfa
 
-Enunciado del Ejercicio
+Encontrar el Pokémon con el nivel más alto dentro del equipo.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
+
+```
+public class Ejercicio4 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(new Pokemon("Pikachu", null, 45), new Pokemon("Charmander", null, 62), new Pokemon("Squirtle", null, 32), new Pokemon("Snorlax", null, 90), new Pokemon("Mewtwo", null, 88));
+        Pokemon resultado = pokemons.stream().max(Comparator.comparingInt(Pokemon::getNivel)).orElse(null);
+        System.out.println("Pokémon Alfa: " + resultado.getNombre() + " (nivel " + resultado.getNivel() + ")");
+    }
+}
+
+```
+
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio4.png)
+
+**Explicación:** Usando el metodo `max()` de streams y un `Comparator` podemos comparar todos los pokemons de la lista por su nivel. Y resultara un pokemon el cual tiene el nivel mas alto.
 
 ### Ejercicio 05 - Nombre del Ejercicio
 
