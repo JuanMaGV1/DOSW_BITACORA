@@ -503,13 +503,35 @@ public class Ejercicio13 {
 
 **Explicación:** Para poder implementar el metodo `groupingBy()` debe estar primero un `collect(Collectors.groupingBy)` y como argumento podemos definir el tipo de los Pokémon y este hará la agrupación por defecto.
 
-### Ejercicio 14 - Nombre del Ejercicio
+### Ejercicio 14 - Organizar por Región
 
-Enunciado del Ejercicio
+Agrupar los Pokémon según su región de origen.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
+
+```
+public class Ejercicio14 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(
+            new Pokemon(1,"Pikachu", "Eléctrico", 0, 320, "Kanto", false),
+            new Pokemon(2,"Chikorita", "Planta", 0, 680, "Johto", false),
+            new Pokemon(3,"Torchic", "Fuego", 0, 530, "Hoenn", false),
+            new Pokemon(4,"Piplup", "Agua", 0, 210, "Sinnoh", false),
+            new Pokemon(5,"Charmander", "Fuego", 0, 495, "Kanto", false),
+            new Pokemon(6,"Totodile", "Agua", 0, 610, "Johto", false)
+        );
+        Map<String, List<Pokemon>> agrupadoPorRegion = pokemons.stream().collect(Collectors.groupingBy(Pokemon::getRegion));
+        System.out.println(agrupadoPorRegion);
+    }
+}
+
+```
+
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio14.png)
+
+**Explicación:** Para poder implementar el metodo `groupingBy()` debe estar primero un `collect(Collectors.groupingBy)` y como argumento podemos definir la región de los Pokémon y este hará la agrupación por defecto.
 
 ### Ejercicio 15 - Nombre del Ejercicio
 
