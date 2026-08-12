@@ -19,4 +19,9 @@ public class Entrenador {
     public String getNombre(){return nombre;}
     public int getMedallas(){return medallas;}
     public List<Pokemon> getEquipo(){return equipo;}
+
+    @Override
+    public String toString() {
+        return getNombre();
+    }
 }
