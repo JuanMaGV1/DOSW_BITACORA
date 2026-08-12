@@ -533,13 +533,35 @@ public class Ejercicio14 {
 
 **Explicación:** Para poder implementar el metodo `groupingBy()` debe estar primero un `collect(Collectors.groupingBy)` y como argumento podemos definir la región de los Pokémon y este hará la agrupación por defecto.
 
-### Ejercicio 15 - Nombre del Ejercicio
+### Ejercicio 15 - Maestro de Gimnasios
 
-Enunciado del Ejercicio
+Dado un listado de entrenadores con sus medallas, encontrar el entrenador con más medallas.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:** 
+
+```
+public class Ejercicio15 {
+    public static void main(String[] args) {
+        List<Entrenador> entrenadores = List.of(
+            new Entrenador((long) 1, "Ash", 8, null),
+            new Entrenador((long) 2, "Misty", 5, null),
+            new Entrenador((long) 3, "Brock", 6, null),
+            new Entrenador((long) 4, "Gary", 10, null)
+        );
+        Entrenador maestroGimnasios = entrenadores.stream()
+                                                  .max(Comparator.comparing(Entrenador::getMedallas))
+                                                  .orElse(null);
+        System.out.println("Campeón de gimnasios: " + maestroGimnasios.getNombre());
+        System.out.println("Medallas obtenidas: " + maestroGimnasios.getMedallas());
+    }
+}
+```
+
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio15.png)
+
+**Explicación:** Usando el metodo `max()` podemos saber cuál es el Entrenador con más medallas, utilizando tambien el comparador `comparing(Entrenador::getMedallas)` para poder comparar a los entrenadores por medallas
 
 ### Ejercicio 16 - Nombre del Ejercicio
 
