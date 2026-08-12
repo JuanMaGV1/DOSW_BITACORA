@@ -446,13 +446,34 @@ public class Ejercicio11 {
 
 **Explicación:** Usando el metodo `mapToDouble()` (que esta especializado para trabajar con los datos primitivos double), obtenemos el poderCombate de cada Pokémon. Con el metodo `average()` calculamos automaticamente el promedio del poderCombate (es necesario agregar el `orElse()` para que sepa que valor tomar en caso que la lista este vacia).
 
-### Ejercicio 12 - Nombre del Ejercicio
+### Ejercicio 12 - Campeón Regional
 
-Enunciado del Ejercicio
+Obtener el Pokémon con mayor poderCombate de toda la lista.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
+
+```
+public class Ejercicio12 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(
+            new Pokemon(1,"Pikachu", "Eléctrico", 0, 320, "", false),
+            new Pokemon(2,"Mewtwo", "Psíquico", 0, 680, "", false),
+            new Pokemon(3,"Dragonite", "Dragon-Volador", 0, 530, "", false),
+            new Pokemon(4,"Charizard", "Fuego-Volador", 0, 610, "", false)
+        );
+        Pokemon pokemonMayorPoderCombate = pokemons.stream()
+                                                   .max(Comparator.comparing(Pokemon::getPoderCombate))
+                                                   .orElse(null);
+        System.out.println("Campeón: "+ pokemonMayorPoderCombate + " con PC: " + pokemonMayorPoderCombate.getPoderCombate());
+    }
+}
+```
+
+**Captura de ejecución:** 
+
+![alt text](Semana2-Ejercicio12.png)
+
+**Explicación:** Usando el metodo `max()` podemos saber cuál es el Pokémon con mayor poderCombate, utilizando tambien el comparador `comparing(Pokemon::getPoderCombate)` para obtener el poderCombate de los Pokémon.
 
 ### Ejercicio 13 - Nombre del Ejercicio
 
