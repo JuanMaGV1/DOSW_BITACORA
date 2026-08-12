@@ -414,13 +414,37 @@ public class Ejercicio10 {
 
 **Explicación:** Usando el metodo `map()` podemos transforar los pokemons de clase Pokemon a String, y usando un `collect()` generamos una lista que contenga solo los nombres.
 
-### Ejercicio 11 - Nombre del Ejercicio
+### Ejercicio 11 - Poder Promedio
 
-Enunciado del Ejercicio
+Calcular el promedio de poderCombate de todos los Pokémon del equipo.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:** 
+
+```
+public class Ejercicio11 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(
+            new Pokemon(1,"Pikachu", "Eléctrico", 0, 320, "", false),
+            new Pokemon(2,"Mewtwo", "Psíquico", 0, 680, "", false),
+            new Pokemon(3,"Dragonite", "Dragon-Volador", 0, 530, "", false),
+            new Pokemon(4,"Squirtle", "Agua", 0, 210, "", false),
+            new Pokemon(5,"Gengar", "Fantasma-Veneno", 0, 495, "", false),
+            new Pokemon(6,"Charizard", "Fuego-Volador", 0, 610, "", false)
+        );
+        double promedioPoderCombate = pokemons.stream()
+                                              .mapToDouble(Pokemon::getPoderCombate)
+                                              .average()
+                                              .orElse(0.0);
+        System.out.println("Poder de combate promedio: " + promedioPoderCombate);
+    }
+}
+```
+
+**Captura de ejecución:** 
+
+![alt text](Semana2-Ejercicio11.png)
+
+**Explicación:** Usando el metodo `mapToDouble()` (que esta especializado para trabajar con los datos primitivos double), obtenemos el poderCombate de cada Pokémon. Con el metodo `average()` calculamos automaticamente el promedio del poderCombate (es necesario agregar el `orElse()` para que sepa que valor tomar en caso que la lista este vacia).
 
 ### Ejercicio 12 - Nombre del Ejercicio
 
