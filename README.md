@@ -24,7 +24,9 @@ public class Ejercicio1 {
 }
 ```
 **Captura de ejecucion:** 
+
 ![alt text](Semana1-Ejercicio1.png)
+
 **Explicación:** Creamos una clase para la manejar la entrada. Y con stream recorremos la lista de los números ingresados y usamos el metodo `filter()` para poder realizar el filtro de los números pares mayores a 10, con la condición `n%2==0` para obtener los números pares y la condición `n > 10` para que sean mayores a 10
 
 ## Ejercicio 02 - Cantidad de Palabras con más de 4 caracteres
@@ -168,13 +170,30 @@ public class Reto5 {
 
 ---
 
-### Ejercicio 01 - Nombre del Ejercicio
+### Ejercicio 01 - Pokémon Tipo Fuego
 
-Enunciado del Ejercicio
+Dada una lista de Pokémon con nombre y tipo, obtener únicamente aquellos cuyo tipo sea Fuego.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:** 
+
+```
+public class Ejercicio1 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(new Pokemon("Pikachu","Eléctrico"), new Pokemon("Charmander", "Fuego"), new Pokemon("Squirtle", "Agua"), new Pokemon("Vulpix", "Fuego"), new Pokemon("Bulbasaur", "Planta"), new Pokemon("Flareon", "Fuego"));
+        List<String> resultado = pokemons.stream()
+                                         .filter(p -> p.getTipo().equals("Fuego"))
+                                         .map(Pokemon::getNombre) //Necesario para poder obtener el nombre de los pokemons
+                                         .toList();
+        System.out.println(resultado);    
+    }
+}
+```
+
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio1.png)
+
+**Explicación:** Realizamos el filtrado de los pokemones tipo Fuego usando el metodo `filter()` y llamando al metodo `getTipo()`. Y usamos un `map()` para poder transformar de clase Pokemon a clase String y poder guardarlos en la lista.
 
 ### Ejercicio 02 - Nombre del Ejercicio
 
