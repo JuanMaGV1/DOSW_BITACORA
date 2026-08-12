@@ -353,13 +353,35 @@ public class Ejercicio8 {
 
 **Explicación:** Usamos el metodo `filter()` para filtrar los Pokémon que esten listos para evolucionar, utilizando el metodo implementado de la clase Pokemon: `puedeEvolucionar()`.
 
-### Ejercicio 09 - Nombre del Ejercicio
+### Ejercicio 09 - Equipo Élite
 
-Enunciado del Ejercicio
+Mostrar únicamente los Pokémon cuyo poderCombate sea superior a 500. 
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:** 
+
+```
+public class Ejercicio9 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(
+            new Pokemon(1,"Pikachu", "Eléctrico", 0, 320, "", false),
+            new Pokemon(2,"Mewtwo", "Psíquico", 0, 680, "", false),
+            new Pokemon(3,"Dragonite", "Dragon-Volador", 0, 530, "", false),
+            new Pokemon(4,"Squirtle", "Agua", 0, 210, "", false),
+            new Pokemon(5,"Gengar", "Fantasma-Veneno", 0, 495, "", false),
+            new Pokemon(6,"Charizard", "Fuego-Volador", 0, 610, "", false)
+        );
+        List<Pokemon> equipoElite = pokemons.stream().filter(p->p.getPoderCombate()>500).toList();
+        System.out.println("Equipo Élite (PC > 500): ");
+        System.out.println(equipoElite);
+    }
+}
+```
+
+**Captura de ejecución:** 
+
+![alt text](Semana2-Ejercicio9.png)
+
+**Explicación:** Usando el metodo `filter()` podemos filtrar de nuestra lista de Pokémon por poder de combate cuando es superior a 500.
 
 ### Ejercicio 10 - Nombre del Ejercicio
 
