@@ -219,13 +219,27 @@ public class Ejercicio2 {
 
 **Explicación:** Usando el metodo `map()` de los streams, podemos transformar la lista de nombres a mayusculas con el metodo `toUpperCase()` que tiene integrado la clase String.
 
-### Ejercicio 03 - Nombre del Ejercicio
+### Ejercicio 03 - Poder Total del Equipo
 
-Enunciado del Ejercicio
+Dada una lista de niveles de Pokémon, calcular la suma total de niveles del equipo. 
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
+
+```
+public class Ejercicio3 {
+    public static void main(String[] args) {
+        List<Integer> niveles = List.of(45, 62, 38, 71, 55, 29);
+        int resultado = niveles.stream().reduce(0, Integer::sum);
+        System.out.println(resultado);
+    }
+}
+```
+
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio3.png)
+
+**Explicación:** Usando el metodo `reduce()` para sumar los elementos de la lista de niveles, y utilizando azucar sintactico podemos reducir la expresión a `Integer::sum`.
 
 ### Ejercicio 04 - Nombre del Ejercicio
 
