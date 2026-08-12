@@ -594,21 +594,45 @@ public class Ejercicio16 {
 
 **Explicación:** Utilizando el metodo `filter()` podemos filtrar de nuestra lista de entrenadores con la expresión lambda `p -> p.getMedallas() > 5` para cumplir nuestra condición de mostrar únicamente los entrenadores que posean más de 5 medallas.
 
-### Ejercicio 17 - Nombre del Ejercicio
+### Ejercicio 17 - Equipo Más Poderoso
 
-Enunciado del Ejercicio
+Calcular cuál entrenador tiene la suma total de poderCombate más alta entre todos sus Pokémon.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
 
-### Ejercicio 17 - Nombre del Ejercicio
+```
+public class Ejercicio17 {
+    public static void main(String[] args) {
+        List<Pokemon> equipoAsh = Arrays.asList(
+            new Pokemon(1, "Pikachu", "Eléctrico", 50, 850.0, "Kanto", false),
+            new Pokemon(2, "Charizard", "Fuego", 60, 1000.0, "Kanto", false)
+        );
+        List<Pokemon> equipoGary = Arrays.asList(
+            new Pokemon(3, "Blastoise", "Agua", 65, 1200.0, "Kanto", false),
+            new Pokemon(4, "Arcanine", "Fuego", 58, 1140.0, "Kanto", false)
+        );
+        List<Pokemon> equipoBrock = Arrays.asList(
+            new Pokemon(5, "Onix", "Roca", 45, 750.0, "Kanto", false),
+            new Pokemon(6, "Geodude", "Roca", 40, 920.0, "Kanto", false)
+        );
 
-Enunciado del Ejercicio
+        List<Entrenador> entrenadores = List.of(new Entrenador((long) 1, "Ash", 0, equipoAsh), new Entrenador((long) 2, "Gary", 0, equipoGary), new Entrenador((long) 3, "Brock", 0, equipoBrock));
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+        Entrenador masPoderoso = entrenadores.stream().max(Comparator.comparingDouble(entrenador -> entrenador.getEquipo().stream().mapToDouble(Pokemon::getPoderCombate).sum())).orElse(null);
+        double poderTotal = masPoderoso.getEquipo().stream().mapToDouble(Pokemon::getPoderCombate).sum();
+
+        System.out.println("Entrenador más poderoso: " + masPoderoso.getNombre());
+        System.out.println("Poder acumulado del equipo: " + poderTotal);
+    }
+}
+
+```
+**Captura de ejecución:** 
+
+![alt text](Semana2-Ejercicio17.png)
+
+**Explicación:** Al solicitarnos la suma total más alta, el método `max()` en el que como argumento tenemos un comparador que realiza un segundo stream sobre la lista de Pokémon de cada entrenador y poder calcular la suma del poderCombate con los metodos `mapToDouble()` y `sum()`.
+
 
 ### Ejercicio 18 - Nombre del Ejercicio
 

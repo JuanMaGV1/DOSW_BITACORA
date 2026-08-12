@@ -56,18 +56,6 @@ public class Pokemon {
     public boolean puedeEvolucionar(){return puedeEvolucionar;}
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Pokemon pokemon = (Pokemon) obj;
-        return nivel == pokemon.nivel && Objects.equals(nombre, pokemon.nombre) && Objects.equals(tipo, pokemon.tipo);
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(nombre, tipo, nivel);
-    }
-
-    @Override
     public String toString() {
         return this.nombre;
     }
