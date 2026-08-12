@@ -475,13 +475,33 @@ public class Ejercicio12 {
 
 **Explicación:** Usando el metodo `max()` podemos saber cuál es el Pokémon con mayor poderCombate, utilizando tambien el comparador `comparing(Pokemon::getPoderCombate)` para obtener el poderCombate de los Pokémon.
 
-### Ejercicio 13 - Nombre del Ejercicio
+### Ejercicio 13 - Organizar por Tipo
 
-Enunciado del Ejercicio
+Agrupar todos los Pokémon por su tipo y mostrar el listado por grupo.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
+
+```
+public class Ejercicio13 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(
+            new Pokemon(1,"Squirtle", "Agua", 0, 210, "", false),
+            new Pokemon(2,"Psyduck", "Agua", 0, 0, "", false),
+            new Pokemon(3,"Charizard", "Fuego", 0, 610, "", false),
+            new Pokemon(4,"Vulpix", "Fuego", 0, 0, "", false),
+            new Pokemon(5,"Bulbasaur", "Planta", 0, 0, "", false)
+        );
+        Map<String, List<Pokemon>> agrupadosPorTipo = pokemons.stream().collect(Collectors.groupingBy(Pokemon::getTipo)); //Version alterna para guardar solo strings: Map<String, List<String>> agrupadosPorTipo = pokemones.stream().collect(Collectors.groupingBy(Pokemon::getTipo, Collectors.mapping(Pokemon::getNombre, Collectors.toList())));
+        System.out.println(agrupadosPorTipo);
+    }
+}
+```
+
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio13.png)
+
+**Explicación:** Para poder implementar el metodo `groupingBy()` debe estar primero un `collect(Collectors.groupingBy)` y como argumento podemos definir el tipo de los Pokémon y este hará la agrupación por defecto.
 
 ### Ejercicio 14 - Nombre del Ejercicio
 
