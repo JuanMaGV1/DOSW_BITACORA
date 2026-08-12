@@ -6,6 +6,7 @@ public class Pokemon {
     private String nombre;
     private String tipo;
     private int nivel;
+    private boolean puedeEvolucionar;
 
     public Pokemon(String nombre, String tipo){
         this.nombre = nombre;
@@ -18,9 +19,15 @@ public class Pokemon {
         this.nivel = nivel;
     }
 
+    public Pokemon(String nombre, boolean puedeEvolucionar){
+        this.nombre = nombre;
+        this.puedeEvolucionar = puedeEvolucionar;
+    }
+
     public String getNombre(){return nombre;}
     public String getTipo(){return tipo;}
     public int getNivel (){return nivel;}
+    public boolean puedeEvolucionar(){return puedeEvolucionar;}
 
     @Override
     public boolean equals(Object obj) {
@@ -32,5 +39,10 @@ public class Pokemon {
     @Override
     public int hashCode() {
         return Objects.hash(nombre, tipo, nivel);
+    }
+
+    @Override
+    public String toString() {
+        return this.nombre;
     }
 }

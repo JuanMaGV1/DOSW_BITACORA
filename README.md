@@ -331,13 +331,27 @@ public class Ejercicio7 {
 
 **Explicación:** Utilizando el metodo `sorted()` podemos ordenar de manera alfabetica la Pokédex del Profesor Oak. (No es necesario un argumento en `sorted()` ya que por defecto organiza en orden alfabetico).
 
-### Ejercicio 08 - Nombre del Ejercicio
+### Ejercicio 08 - Evoluciones Preparadas
 
-Enunciado del Ejercicio
+Dada una lista de Pokémon que incluye si pueden evolucionar (boolean puedeEvolucionar), obtener únicamente los que estén listos para evolucionar. 
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:** 
+
+```
+public class Ejercicio8 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(new Pokemon("Pikachu", true), new Pokemon("Raichu", false), new Pokemon("Charmander", true), new Pokemon("Charizard", false), new Pokemon("Squirtle", true), new Pokemon("Blastoise", false));
+        List<Pokemon> listaEvolucion = pokemons.stream().filter(p -> p.puedeEvolucionar()).toList();
+        System.out.println("Listos para evolucionar:");
+        System.out.print(listaEvolucion);
+    }
+}
+```
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio8.png)
+
+**Explicación:** Usamos el metodo `filter()` para filtrar los Pokémon que esten listos para evolucionar, utilizando el metodo implementado de la clase Pokemon: `puedeEvolucionar()`.
 
 ### Ejercicio 09 - Nombre del Ejercicio
 
