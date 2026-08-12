@@ -195,13 +195,29 @@ public class Ejercicio1 {
 
 **Explicación:** Realizamos el filtrado de los pokemones tipo Fuego usando el metodo `filter()` y llamando al metodo `getTipo()`. Y usamos un `map()` para poder transformar de clase Pokemon a clase String y poder guardarlos en la lista.
 
-### Ejercicio 02 - Nombre del Ejercicio
+### Ejercicio 02 - Pokédex Gritona
 
-Enunciado del Ejercicio
+Transformar todos los nombres de Pokémon a mayúsculas.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
+
+```
+public class Ejercicio2 {
+    public static void main(String[] args) {
+        List<String> nombres = List.of("Pikachu", "Charmander", "Squirtle", "Bulbasaur" );
+        List<String> resultado = nombres.stream()
+                                        .map(String::toUpperCase)
+                                        .toList();
+        System.out.println(resultado);
+    }
+}
+```
+
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio2.png)
+
+**Explicación:** Usando el metodo `map()` de los streams, podemos transformar la lista de nombres a mayusculas con el metodo `toUpperCase()` que tiene integrado la clase String.
 
 ### Ejercicio 03 - Nombre del Ejercicio
 
