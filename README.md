@@ -264,29 +264,51 @@ public class Ejercicio4 {
 
 **Explicación:** Usando el metodo `max()` de streams y un `Comparator` podemos comparar todos los pokemons de la lista por su nivel. Y resultara un pokemon el cual tiene el nivel mas alto.
 
-### Ejercicio 05 - Nombre del Ejercicio
+### Ejercicio 05 - Pokémon Legendarios
 
-Enunciado del Ejercicio
+Contar cuántos Pokémon del equipo tienen nivel superior a 80.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
 
-### Ejercicio 06 - Nombre del Ejercicio
+```
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        List<Pokemon> pokemons = List.of(new Pokemon("Pikachu", null, 45), new Pokemon("Mewtwo", null, 88), new Pokemon("Dragonite", null, 82), new Pokemon("Squirtle", null, 38), new Pokemon("Mew", null, 85), new Pokemon("Charmander", null, 62));
+        long resultado = pokemons.stream()
+                             .filter(p -> p.getNivel() > 80)
+                             .count();
+        System.out.println("Pokémon con nivel > 80: " + resultado);
+    }
+}
+```
 
-Enunciado del Ejercicio
+**Captura de ejecución:**
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+![alt text](Semana2-Ejercicio5.png)
 
-### Ejercicio 06 - Nombre del Ejercicio
+**Explicación:** Primero realizamos el filtrado de los pokemons con el metodo `filter()` para verificar que pokemons tienen nivel superior a 80. Y realizamos un `count()` posterior a ese filtrado.
 
-Enunciado del Ejercicio
+### Ejercicio 06 - Pokédex Sin duplicados
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+Dada una lista de Pokémon con elementos repetidos, generar una nueva colección donde cada Pokémon aparezca una sola vez. 
+
+**Código implementado:**
+
+```
+public class Ejercicio6 {
+    public static void main(String[] args) {
+        List<String> pokemons = List.of("Pikachu","Charmander","Pikachu","Squirtle","Charmander","Mewtwo");
+        List<String> resultado = pokemons.stream().distinct().toList();
+        System.out.println(resultado);
+    }
+}
+```
+
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio5.png)
+
+**Explicación:** Usamos el metodo `distinct()` de los streams, para eliminar los elementos repetidos y el `toList()` para generar la nueva colección donde cada Pokemón aparece una sola vez.
 
 ### Ejercicio 07 - Nombre del Ejercicio
 
