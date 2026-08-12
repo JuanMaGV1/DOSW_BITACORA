@@ -310,13 +310,26 @@ public class Ejercicio6 {
 
 **Explicación:** Usamos el metodo `distinct()` de los streams, para eliminar los elementos repetidos y el `toList()` para generar la nueva colección donde cada Pokemón aparece una sola vez.
 
-### Ejercicio 07 - Nombre del Ejercicio
+### Ejercicio 07 - Orden del Profesor Oak
 
-Enunciado del Ejercicio
+El Profesor Oak quiere su Pokédex organizada. Ordenar alfabéticamente los nombres de los Pokémon.
 
-**Código implementado:** (pegar el código aquí)
-**Captura de ejecución:** (imagen)
-**Explicación:** (breve descripción)
+**Código implementado:**
+
+```
+public class Ejercicio7 {
+    public static void main(String[] args) {
+        List<String> pokemons = List.of("Squirtle","Pikachu","Mewtwo","Bulbasaur","Charmander","Abra");
+        List<String> pokemonsOrdenado = pokemons.stream().sorted().toList();
+        System.out.println(pokemonsOrdenado);
+    }
+}
+```
+**Captura de ejecución:**
+
+![alt text](Semana2-Ejercicio7.png)
+
+**Explicación:** Utilizando el metodo `sorted()` podemos ordenar de manera alfabetica la Pokédex del Profesor Oak. (No es necesario un argumento en `sorted()` ya que por defecto organiza en orden alfabetico).
 
 ### Ejercicio 08 - Nombre del Ejercicio
 
