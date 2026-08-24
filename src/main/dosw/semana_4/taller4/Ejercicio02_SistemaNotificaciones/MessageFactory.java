@@ -1,5 +1,5 @@
 package main.dosw.semana_4.taller4.Ejercicio02_SistemaNotificaciones;
 
 public interface MessageFactory {
-    
+    Message build(OrderEvent event);
 }

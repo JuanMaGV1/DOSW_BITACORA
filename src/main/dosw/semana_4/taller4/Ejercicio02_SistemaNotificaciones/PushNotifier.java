@@ -1,11 +1,11 @@
 package main.dosw.semana_4.taller4.Ejercicio02_SistemaNotificaciones;
 
-public class EmailNotifier implements NotificationObserver {
+public class PushNotifier implements NotificationObserver {
     private MessageFactory factory;
     private boolean active;
 
-    public EmailNotifier(boolean active) {
-        this.factory = new EmailMessageFactory();
+    public PushNotifier(boolean active) {
+        this.factory = new PushMessageFactory();
         this.active = active;
     }
 
@@ -13,8 +13,8 @@ public class EmailNotifier implements NotificationObserver {
     public void notify(OrderEvent event) {
         if (!active) return;
         Message message = factory.build(event);
-        System.out.println("CORREO: " + message);
-        // Lógica real de envío de email
+        System.out.println("PUSH: " + message);
+        // Lógica real de envío de push notification
     }
 
     public void setActive(boolean active) {
