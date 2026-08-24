@@ -2,18 +2,19 @@ package main.dosw.semana_4.taller4.Ejercicio06_MotorRecomendaciones;
 
 import java.util.List;
 
-class PopularityStrategy implements RecommendationAlgorithm {
+public class SimilarityStrategy implements RecommendationAlgorithm {
     private List<Content> allContent;
     
-    public PopularityStrategy(List<Content> allContent) {
+    public SimilarityStrategy(List<Content> allContent) {
         this.allContent = allContent;
     }
     
     @Override
     public List<Content> recommend(User user) {
-        System.out.println(" Recomendando los más populares");
+        System.out.println(" Recomendando por similitud con otros usuarios");
         return allContent.stream()
-                .limit(5)
+                .skip(2)
+                .limit(3)
                 .toList();
     }
 }
