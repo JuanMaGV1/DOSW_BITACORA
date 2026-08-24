@@ -1,9 +1,9 @@
 package main.dosw.semana_4.taller4.Ejercicio09_SistemaAutenticacionEmpresarial;
 
-public class LocationValidator extends Validator {
+public class TimeValidator extends Validator {
     @Override
     protected boolean check(AuthResult result) {
-        // Simular verificación de ubicación
+        // Simular verificación de horario laboral
         return true; // Siempre pasa en este ejemplo
     }
 }
