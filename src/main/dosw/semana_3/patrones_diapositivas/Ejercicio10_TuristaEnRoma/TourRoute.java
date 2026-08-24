@@ -1,5 +1,6 @@
 package main.dosw.semana_3.patrones_diapositivas.Ejercicio10_TuristaEnRoma;
 
+// Representa la ruta turistica de Roma
 public class TourRoute implements Aggregate<Place>{
     private final Place[] places;
 
@@ -14,7 +15,7 @@ public class TourRoute implements Aggregate<Place>{
     }
 
     public Iterator<Place> createIterator(){
-        return new RomeIterator();
+        return new RomeIterator(places);
     }
 
 }
