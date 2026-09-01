@@ -1,8 +1,0 @@
-package main.dosw.semana_3.patrones_diapositivas.Ejercicio01_PlataformaComercioPagos;
-
-public class BankTransferProcessor extends PaymentProcessor{
-    @Override
-    public Payment createPayment() {
-        return new BankTransferPayment();
-    }
-}
