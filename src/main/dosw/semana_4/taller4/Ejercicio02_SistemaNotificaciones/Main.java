@@ -16,10 +16,10 @@ public class Main {
         order.attach(pushNotifier);
 
         // Cambiar estado del pedido (esto dispara las notificaciones)
-        System.out.println("=== Pedido #1001: PENDIENTE → ENVIADO ===");
+        System.out.println("=== Pedido #1001: PENDIENTE -> ENVIADO ===");
         order.setStatus("ENVIADO");
 
-        System.out.println("\n=== Pedido #1001: ENVIADO → ENTREGADO ===");
+        System.out.println("\n=== Pedido #1001: ENVIADO -> ENTREGADO ===");
         order.setStatus("ENTREGADO");
     }
 }

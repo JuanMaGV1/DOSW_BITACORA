@@ -14,7 +14,6 @@ public class EmailNotifier implements NotificationObserver {
         if (!active) return;
         Message message = factory.build(event);
         System.out.println("CORREO: " + message);
-        // Lógica real de envío de email
     }
 
     public void setActive(boolean active) {

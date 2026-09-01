@@ -25,7 +25,7 @@ public class Ejercicio1 {
 ```
 **Captura de ejecucion:** 
 
-![alt text](Semana1-Ejercicio1.png)
+![alt text](/src/main/dosw/semana_1/images/Semana1-Ejercicio1.png)
 
 **Explicación:** Creamos una clase para la manejar la entrada. Y con stream recorremos la lista de los números ingresados y usamos el metodo `filter()` para poder realizar el filtro de los números pares mayores a 10, con la condición `n%2==0` para obtener los números pares y la condición `n > 10` para que sean mayores a 10
 
@@ -55,7 +55,7 @@ public class Ejercicio2 {
 ```
 **Captura de ejecucion:**
 
-![alt text](Semana1-Ejercicio2.png)
+![alt text](/src/main/dosw/semana_1/images/Semana1-Ejercicio2.png)
 
 **Explicación:** Creamos una clase para manejar la entrada, y con stream recorremos la lista de las palabras ingresadas. Usando el metodo `filter()` para poder filtrar las palabras con más de 4 caracteres, con la condición `n.legth() > 4`. Usando el metodo `map()` convertimos las palabras en máyusculas usando `String::toUpperCase` que es un metodo de la clase String. Usamos el metodo `sorted()` para ordenarlas alfabeticamente, no es necesario agregarle un parametro ya que por defecto ordena por orden alfabetico. Por ultimo el metodo `count()`, para la cantidad total de palabras resultantes.
 
@@ -90,7 +90,7 @@ public class Ejercicio3 {
 ```
 **Captura de ejecucion:**
 
-![alt text](Semana1-Ejercicio3.png)
+![alt text](/src/main/dosw/semana_1/images/Semana1-Ejercicio3.png)
 
 **Explicación:** Usando stream, hacemos el filtrado de usuarios activos con el metodo `filter` y aprovechando la función `isActive` que creamos en usuario. Despues usamos el primer `map()` para transformar los datos de la clase `User` a `String` obteniendo el nombre de los usuarios ya filtrados. Igualmente, usamos el segundo `map()` para transformar los nombres en mayuscula. Despues usamos el metodo `sorted()` para organizar de manera alfabetica (no es necesario escribir un comparador como argumento, ya que por defecto usa el orden alfabetico). Por ultimo, usamos el metood `toList()` para dejar todo en una lista.
 
@@ -121,7 +121,7 @@ public class Ejercicio4 {
 ```
 **Captura de ejecucion:**
 
-![alt text](Semana1-Ejercicio4.png)
+![alt text](/src/main/dosw/semana_1/images/Semana1-Ejercicio4.png)
 
 **Explicación:** Usando stream, hacemos el filtrado de usuarios mayores de edad con el metodo `filter` con la condición `u -> u.getAge() > 18`. Despues usamos `map()` para transformar los datos de la clase `User` a `String` obteniendo el nombre de los usuarios ya filtrados. Por ultimo, usamos el metood `toList()` para dejar todo en una lista.
 
@@ -156,7 +156,7 @@ public class Reto5 {
 ```
 **Captura de ejecucion:**
 
-![alt text](Semana1-Ejercicio5.png)
+![alt text](/src/main/dosw/semana_1/images/Semana1-Ejercicio5.png)
 
 **Explicación:** Usando stream, hacemos la revision de cada transacción con el metodo `peek()` y haciendo un override a la clase `Transaction` para poder ver la información de mejor manera. Despues usamos el metodo `anymatch()` para verificar si existe al menos una transacción no aprobada. Y en el mensaje final invertimos el resultado del anymatch porque se tuvo en cuenta que el lote de transacciones es valido si todas las transacciones fueron aprobadas.
 
@@ -191,7 +191,7 @@ public class Ejercicio1 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio1.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio1.png)
 
 **Explicación:** Realizamos el filtrado de los pokemones tipo Fuego usando el metodo `filter()` y llamando al metodo `getTipo()`. Y usamos un `map()` para poder transformar de clase Pokemon a clase String y poder guardarlos en la lista.
 
@@ -215,7 +215,7 @@ public class Ejercicio2 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio2.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio2.png)
 
 **Explicación:** Usando el metodo `map()` de los streams, podemos transformar la lista de nombres a mayusculas con el metodo `toUpperCase()` que tiene integrado la clase String.
 
@@ -237,7 +237,7 @@ public class Ejercicio3 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio3.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio3.png)
 
 **Explicación:** Usando el metodo `reduce()` para sumar los elementos de la lista de niveles, y utilizando azucar sintactico podemos reducir la expresión a `Integer::sum`.
 
@@ -260,7 +260,7 @@ public class Ejercicio4 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio4.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio4.png)
 
 **Explicación:** Usando el metodo `max()` de streams y un `Comparator` podemos comparar todos los pokemons de la lista por su nivel. Y resultara un pokemon el cual tiene el nivel mas alto.
 
@@ -284,7 +284,7 @@ public class Ejercicio5 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio5.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio5.png)
 
 **Explicación:** Primero realizamos el filtrado de los pokemons con el metodo `filter()` para verificar que pokemons tienen nivel superior a 80. Y realizamos un `count()` posterior a ese filtrado.
 
@@ -306,7 +306,7 @@ public class Ejercicio6 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio5.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio5.png)
 
 **Explicación:** Usamos el metodo `distinct()` de los streams, para eliminar los elementos repetidos y el `toList()` para generar la nueva colección donde cada Pokemón aparece una sola vez.
 
@@ -327,7 +327,7 @@ public class Ejercicio7 {
 ```
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio7.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio7.png)
 
 **Explicación:** Utilizando el metodo `sorted()` podemos ordenar de manera alfabetica la Pokédex del Profesor Oak. (No es necesario un argumento en `sorted()` ya que por defecto organiza en orden alfabetico).
 
@@ -349,7 +349,7 @@ public class Ejercicio8 {
 ```
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio8.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio8.png)
 
 **Explicación:** Usamos el metodo `filter()` para filtrar los Pokémon que esten listos para evolucionar, utilizando el metodo implementado de la clase Pokemon: `puedeEvolucionar()`.
 
@@ -379,7 +379,7 @@ public class Ejercicio9 {
 
 **Captura de ejecución:** 
 
-![alt text](Semana2-Ejercicio9.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio9.png)
 
 **Explicación:** Usando el metodo `filter()` podemos filtrar de nuestra lista de Pokémon por poder de combate cuando es superior a 500.
 
@@ -410,7 +410,7 @@ public class Ejercicio10 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio10.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio10.png)
 
 **Explicación:** Usando el metodo `map()` podemos transforar los pokemons de clase Pokemon a String, y usando un `collect()` generamos una lista que contenga solo los nombres.
 
@@ -442,7 +442,7 @@ public class Ejercicio11 {
 
 **Captura de ejecución:** 
 
-![alt text](Semana2-Ejercicio11.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio11.png)
 
 **Explicación:** Usando el metodo `mapToDouble()` (que esta especializado para trabajar con los datos primitivos double), obtenemos el poderCombate de cada Pokémon. Con el metodo `average()` calculamos automaticamente el promedio del poderCombate (es necesario agregar el `orElse()` para que sepa que valor tomar en caso que la lista este vacia).
 
@@ -471,7 +471,7 @@ public class Ejercicio12 {
 
 **Captura de ejecución:** 
 
-![alt text](Semana2-Ejercicio12.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio12.png)
 
 **Explicación:** Usando el metodo `max()` podemos saber cuál es el Pokémon con mayor poderCombate, utilizando tambien el comparador `comparing(Pokemon::getPoderCombate)` para obtener el poderCombate de los Pokémon.
 
@@ -499,7 +499,7 @@ public class Ejercicio13 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio13.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio13.png)
 
 **Explicación:** Para poder implementar el metodo `groupingBy()` debe estar primero un `collect(Collectors.groupingBy)` y como argumento podemos definir el tipo de los Pokémon y este hará la agrupación por defecto.
 
@@ -529,7 +529,7 @@ public class Ejercicio14 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio14.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio14.png)
 
 **Explicación:** Para poder implementar el metodo `groupingBy()` debe estar primero un `collect(Collectors.groupingBy)` y como argumento podemos definir la región de los Pokémon y este hará la agrupación por defecto.
 
@@ -559,7 +559,7 @@ public class Ejercicio15 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio15.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio15.png)
 
 **Explicación:** Usando el metodo `max()` podemos saber cuál es el Entrenador con más medallas, utilizando tambien el comparador `comparing(Entrenador::getMedallas)` para poder comparar a los entrenadores por medallas
 
@@ -590,7 +590,7 @@ public class Ejercicio16 {
 ```
 **Captura de ejecución:** 
 
-![alt text](Semana2-Ejercicio16.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio16.png)
 
 **Explicación:** Utilizando el metodo `filter()` podemos filtrar de nuestra lista de entrenadores con la expresión lambda `p -> p.getMedallas() > 5` para cumplir nuestra condición de mostrar únicamente los entrenadores que posean más de 5 medallas.
 
@@ -629,7 +629,7 @@ public class Ejercicio17 {
 ```
 **Captura de ejecución:** 
 
-![alt text](Semana2-Ejercicio17.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio17.png)
 
 **Explicación:** Al solicitarnos la suma total más alta, el método `max()` en el que como argumento tenemos un comparador que realiza un segundo stream sobre la lista de Pokémon de cada entrenador y poder calcular la suma del poderCombate con los metodos `mapToDouble()` y `sum()`.
 
@@ -670,7 +670,7 @@ public class Ejercicio18 {
 
 **Captura de ejecución:** 
 
-![alt text](Semana2-Ejercicio18.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio18.png)
 
 **Explicación:** Utilizando el método `sorted()` y un comparador para poder comparar el poder de combate de cada Pokémon, además aplicamos un `reversed()` para que el ordenamiento lo haga de manera descendente. Agregamos un `limit(5)` para limitar el resultado a los primeros 5 Pokémon
 
@@ -725,7 +725,7 @@ public class Ejercicio19 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio19.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio19.png)
 
 **Explicación:** Utilizando el metodo `sorted()` podemos utilizar más de un criterio de orden, con el metodo `thenComparing()`. Además utilizamos al final el `limit(3)` para obtener solo los primeros 3.
 
@@ -768,6 +768,280 @@ public class Ejercicio20 {
 
 **Captura de ejecución:**
 
-![alt text](Semana2-Ejercicio20.png)
+![alt text](/src/main/dosw/semana_2/images/Semana2-Ejercicio20.png)
 
 **Explicación:** Se utilizó la estructura de `Map` para las agrupaciones, porque es el que está por defecto en el método `groupingBy()`. Además de utilizar el metodo `counting()` para contabilizar la cantidad de elementos de las agrupaciones generadas.
+
+
+
+# SEMANA No 4 - Taller 4 (Patrones de diseño combinados)
+
+## Ejercicio 01 - PlataformaPagosInteligentes
+
+### Rol de cada patrón
+
+- **Strategy:** Encapsula cada algoritmo de pago en clases independientes (TarjetaStrategy, PseStrategy, NequiStrategy). El Checkout trabaja con la interfaz PaymentStrategy sin importar qué medio se use.
+
+- **Factory Method:** Crea el proveedor correcto según el país del usuario. ColombiaPaymentFactory, UsaPaymentFactory. El cliente no sabe qué objeto concreto se construye.
+
+### Interacción entre patrones
+
+El usuario selecciona su país -> Factory construye el gateway correcto -> ese gateway implementa PaymentStrategy -> el Checkout llama strategy.process(amount). 
+La Factory decide qué Strategy instanciar; el Checkout nunca cambia.
+
+### Justificación
+
+Sin Factory, el Checkout conocería qué Strategy instanciar, generando acoplamiento. Sin Strategy, cada medio de pago tendría lógica dispersa en el Checkout. La combinación permite:
+
+- Bajo acoplamiento: Checkout solo conoce la interfaz
+
+- Alta cohesión: Cada clase tiene una sola responsabilidad
+
+- Extensibilidad: Nuevos países o medios solo requieren nuevas clases
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio01_PlataformaPagosInteligentes/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio01_PlataformaPagosInteligentes/Ejercicio01.png)
+
+
+## Ejercicio 02 - Sistemas de notificaciones Multicanal
+
+### Rol de cada patron
+
+- **Observer:** Desacopla el Pedido de los canales. El Pedido es el Subject. EmailNotifier, SmsNotifier y PushNotifier son Observers. Agregar un canal nuevo no modifica el Pedido.
+
+- **Factory Method:** Crea el mensaje correcto para cada canal. EmailMessageFactory genera HTML, SmsMessageFactory genera texto plano de 160 chars, PushMessageFactory genera payload JSON.
+
+### Interacción entre patrones
+
+El Pedido cambia de estado -> notifica a todos los Observers activos -> cada Observer llama a su Factory para construir el mensaje correcto para ese canal -> envía.
+
+### Justificación
+
+Sin Factory, cada Observer construiría el mensaje a su manera con lógica dispersa. Sin Observer, el Pedido conocería todos los canales. La combinación permite:
+
+- Desacoplamiento: El Pedido no conoce los canales
+
+- Reutilización: La construcción del mensaje está centralizada
+
+- Extensibilidad: Nuevos canales solo requieren nuevas clases
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio02_SistemaNotificaciones/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio02_SistemaNotificaciones/Ejercicio02.png)
+
+
+## Ejercicio 03 - Sistema de reportes empresariales
+
+### Rol de cada patron
+
+- **Template Method:** Define la estructura del algoritmo en la clase base ReportGenerator con un método final generate() que llama en orden los 4 pasos. Las subclases sobreescriben solo los pasos variables (applyFormat, export).
+
+- **Factory Method:** Crea la instancia correcta según la solicitud. ReportFactory.create('PDF') retorna PdfReport. ReportFactory.create('CSV') retorna CsvReport. El cliente no instancia directamente.
+
+### Interacción entre patrones
+
+El cliente pide 'reporte PDF' -> Factory construye PdfReport -> el cliente llama report.generate() -> Template Method ejecuta los 4 pasos en orden, usando la implementación PDF para los pasos variables.
+
+### Justificación
+
+Sin Template Method, cada formato repetiría el flujo completo. Sin Factory, el cliente instanciaría directamente las clases concretas. La combinación permite:
+
+- Reutilización: Los pasos fijos se implementan una sola vez
+
+- Consistencia: Todos los reportes siguen el mismo flujo
+
+- Desacoplamiento: El cliente solo conoce la Factory
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio03_SistemaReportesEmpresarial/DiagramaClase.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio03_SistemaReportesEmpresarial/Ejercicio03.png)
+
+
+
+## Ejercicio 04 - Plataforma de Videojuegos
+
+### Rol de cada patron
+
+- **Builder:** Construye el personaje paso a paso al inicio. WarriorBuilder permite setArmor().setWeapon().setSkill(). El Director puede construir arquetipos predefinidos (guerrero élite, mago de fuego). Evita constructores con 10 parámetros.
+
+- **Decorator:** Agrega poderes dinámicamente sin modificar la clase base del personaje. ShieldDecorator, SpeedDecorator e InvisibilityDecorator envuelven el personaje y añaden comportamiento en runtime.
+
+### Interacción entre patrones
+
+Builder crea el personaje base configurable -> durante la partida, Decorator envuelve el personaje con poderes temporales ->  al terminar el efecto, el wrapper se descarta sin afectar la clase base del personaje.
+
+### Justificación
+
+Sin Decorator: 2^5 = 32 subclases para 5 poderes combinables. Con Decorator: 5 wrappers + 1 base = 6 clases. La explosión combinatoria es la señal inequívoca para usar Decorator.
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio04_PlataformaVideojuegos/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio04_PlataformaVideojuegos/Ejercicio04.png)
+
+
+## Ejercicio 05 - Integración con Sistema Bancario Antiguo
+
+### Rol de cada patron
+
+- **Adapter:** 	Hace que LegacyBankService sea compatible con la interfaz PaymentProcessor. LegacyBankAdapter implementa PaymentProcessor e internamente traduce las llamadas: amount -> cents, pay() -> executeTransaction().
+
+- **Facade:** Expone un método simple procesarPago(monto) que internamente orquesta los 8 pasos de inicialización y uso del LegacyBankService (o del Adapter). Los desarrolladores usan la Facade y no conocen los detalles.
+
+### Interacción entre patrones
+
+Desarrollador llama BankFacade.procesarPago(monto) -> Facade inicializa conexión, sesión y contexto -> delega al LegacyBankAdapter -> Adapter traduce al formato legacy -> LegacyBankService ejecuta. El desarrollador nunca toca LegacyBankService.
+
+### Justificación
+
+Adapter = 'hablar el idioma del otro'. Facade = 'no me cuentes todo, dame lo simple'. Puedes tener ambos: la Facade usa el Adapter internamente. Son complementarios, no excluyentes.
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio05_IntegracoinSistemasBancarios/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio05_IntegracoinSistemasBancarios/Ejercicio05.png)
+
+
+## Ejercicio 06 - Motor de recomendaciones
+
+### Rol de cada patron
+
+- **Strategy:** 	Permite intercambiar el algoritmo de recomendación en tiempo de ejecución. GenreStrategy, HistoryStrategy, PopularityStrategy y SimilarityStrategy implementan RecommendationAlgorithm.
+
+- **Observer:** Notifica automáticamente a todos los componentes cuando cambian las preferencias. HomePageComponent, NotificationService y SuggestedListComponent son Observers del evento 'preferencias cambiadas'.
+
+### Interacción entre patrones
+
+Usuario cambia preferencias -> el perfil de usuario es el Subject, notifica a sus Observers -> cada Observer reactualiza su contenido usando el nuevo algoritmo Strategy que fue configurado -> la UI se actualiza sin polling.
+
+### Justificación
+
+Strategy responde 'cómo recomendar'; Observer responde 'a quién avisar que cambió el cómo'. Son ortogonales: cambiar el algoritmo (Strategy) dispara el aviso (Observer) a los componentes que deben re-renderizarse.
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio06_MotorRecomendaciones/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio06_MotorRecomendaciones/Ejercicio06.png)
+
+
+## Ejercicio 07 - Flujo de Aprobración de Documentos
+
+### Rol de cada patron
+
+- **Chain of Responsability:** Encadena los validadores. Cada handler (AutorHandler, LiderHandler, JuridicoHandler) decide si procesa el documento o lo pasa al siguiente. La cadena puede configurarse distinto según el tipo de documento.
+
+- **State:** Maneja las transiciones de estado del documento. DraftState, InReviewState, ApprovedState, RejectedState. Cada estado sabe a qué estado puede transicionar y qué operaciones permite. Elimina los switch/if de estado.
+
+### Interacción entre patrones
+
+Un handler de la cadena procesa el documento -> según su resultado, invoca document.approve() o document.reject() -> el objeto State actual del documento ejecuta la transición correspondiente -> el documento nunca tiene un switch de estados.
+
+### Justificación
+
+Sin State: cada método de Document tendría switch(estado){case DRAFT: ... case IN_REVIEW:...}. Con State: cada estado encapsula su propio comportamiento. El documento no sabe en qué estado está — su estado sabe qué hacer.
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio07_FlujoAprobacionDocumentos/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio07_FlujoAprobacionDocumentos/Ejercicio07.png)
+
+
+
+## Ejercicio 08 - Sistema de pedidos de Restaurante
+
+### Rol de cada patron
+
+- **Builder:** Construye el pedido personalizado paso a paso. OrderBuilder permite setSize().setMeat().setToppings().addSide(). El pedido resultante es inmutable una vez construido. Evita el constructor caótico con todos los ingredientes.
+
+- **Observer:** Notifica a los subsistemas cuando el pedido se confirma. KitchenService, BillingService y DeliveryService son Observers. El pedido solo hace pedido.confirm() - no sabe a quién avisar.
+
+### Interacción entre patrones
+
+Cliente configura el pedido con Builder -> llama build() que retorna un Order inmutable -> el sistema hace order.confirm() -> el Order notifica a todos sus Observers -> cada subsistema reacciona de manera independiente.
+
+### Justificación
+
+Builder garantiza que el pedido esté completo y válido antes de existir (invariantes en build()). Observer garantiza que la confirmación desencadene reacciones sin acoplamiento. Son momentos distintos del ciclo de vida del pedido.
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio08_SistemaPedidosRestaurante/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio08_SistemaPedidosRestaurante/Ejercicio08.png)
+
+
+## Ejercicio 09 - Sistema de Autenticación Empresarial
+
+### Rol de cada patron
+
+- **Strategy:** Selecciona el mecanismo de autenticación. PasswordStrategy, GoogleStrategy, BiometricStrategy implementan AuthStrategy. El AuthService recibe la estrategia correcta según el tipo de usuario y llama authenticate().
+
+- **Chain of Responsability:** Procesa las validaciones en secuencia. CredentialValidator -> PermissionValidator -> LocationValidator -> TimeValidator. Cada uno decide si pasa al siguiente o lanza un AccessDeniedException.
+
+### Interacción entre patrones
+
+Usuario intenta acceder -> AuthService selecciona la Strategy correcta -> autenticación exitosa -> el resultado pasa por la cadena de validadores -> si todos aprueban, se concede acceso. Strategy decide 'cómo autentico'; Chain decide 'si tengo acceso'.
+
+### Justificación
+
+Strategy = 'qué llave uso para entrar'. Chain = 'pasar los controles de seguridad después de entrar'. Son fases distintas: autenticación (quién eres) -> autorización (qué puedes hacer).
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio09_SistemaAutenticacionEmpresarial/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio09_SistemaAutenticacionEmpresarial/Ejercicio09.png)
+
+
+## Ejercicio 10 - Aplicación de Edición de Imágenes
+
+### Rol de cada patron
+
+- **Decorator:** Aplica filtros de forma acumulativa. GrayscaleDecorator, SepiaDecorator, BrightnessDecorator envuelven la imagen. Se pueden apilar en cualquier orden. Agregar un filtro nuevo no modifica los existentes.
+
+- **Command:** 	Encapsula cada operación del usuario como un objeto (ApplyFilterCommand, RemoveFilterCommand). El historial de comandos permite undo individual. El comando tiene execute() y undo().
+
+### Interacción entre patrones
+
+Usuario aplica filtro -> se crea un ApplyFilterCommand que envuelve la imagen con un Decorator -> el comando se agrega al historial -> usuario hace undo -> el Command quita el Decorator de la cadena y restaura la imagen anterior.
+
+### Justificación
+
+Command para undo: necesitas dos stacks — uno de 'ejecutados' y uno de 'deshechos'. Decorator para filtros: la imagen base nunca cambia, solo se envuelve. Undo = quitar el último wrapper. Son el complemento perfecto.
+
+### Esquema de codigo
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio10_AplicacionEdicionImagenes/DiagramaClase.drawio.png)
+
+### Demostración de ejecución
+
+![alt text](/src/main/dosw/semana_4/taller4/Ejercicio10_AplicacionEdicionImagenes/Ejercicio10.png)

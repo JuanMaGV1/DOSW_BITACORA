@@ -4,7 +4,7 @@ public class SmsMessageFactory implements MessageFactory {
     @Override
     public Message build(OrderEvent event) {
         String content = String.format(
-            "Pedido #%d: %s → %s",
+            "Pedido #%d: %s -> %s",
             event.getOrderId(),
             event.getOldStatus(),
             event.getNewStatus()

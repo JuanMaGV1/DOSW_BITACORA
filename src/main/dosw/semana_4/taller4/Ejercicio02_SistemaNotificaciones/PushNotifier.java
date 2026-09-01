@@ -14,7 +14,6 @@ public class PushNotifier implements NotificationObserver {
         if (!active) return;
         Message message = factory.build(event);
         System.out.println("PUSH: " + message);
-        // Lógica real de envío de push notification
     }
 
     public void setActive(boolean active) {
