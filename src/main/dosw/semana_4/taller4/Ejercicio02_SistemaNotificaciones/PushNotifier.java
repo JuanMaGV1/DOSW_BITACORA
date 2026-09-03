@@ -1,0 +1,22 @@
+package main.dosw.semana_4.taller4.Ejercicio02_SistemaNotificaciones;
+
+public class PushNotifier implements NotificationObserver {
+    private MessageFactory factory;
+    private boolean active;
+
+    public PushNotifier(boolean active) {
+        this.factory = new PushMessageFactory();
+        this.active = active;
+    }
+
+    @Override
+    public void notify(OrderEvent event) {
+        if (!active) return;
+        Message message = factory.build(event);
+        System.out.println("PUSH: " + message);
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+}
